@@ -3,22 +3,24 @@ let grade = 0;
 let sum = 0;
 let average = 0;
 let badGrades = 0;
+let index = 0;
 
-
-while(!isNaN(grade)){
-    let index = 0;
+while (!isNaN(grade)) {
     grade = parseInt(prompt("Geef een resultaat in"));
     grades[index] = grade;
     index++;
 }
 
+grades.pop();
 
-for(let index = 0; index < grades.length; index++){
-    sum = sum + grades[index];
+console.log(grades);
 
-    if(grades[index] < 10){
-        badGrades++
-    }
+for (let index2 = 0; index2 < grades.length; index2++) {
+  sum = sum + grades[index2];
+
+  if (grades[index2] < 10) {
+    badGrades++;
+  }
 }
 
 average = sum / grades.length;
